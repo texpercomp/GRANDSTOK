@@ -13,6 +13,9 @@
       position: relative;
       min-height: 100vh;
       color: #000; /* Yazılar siyah olacak */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* İçeriği üst ve alt kısıma yerleştir */
       overflow: hidden; /* Kaydırmayı engelle */
     }
 
@@ -21,9 +24,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Sayfa yüksekliği tam dolacak şekilde ayarlandı */
       text-align: center;
       padding: 0 20px;
+      flex-grow: 1; /* Alt footer'ı yukarı iterek yer açıyoruz */
     }
 
     .logo {
@@ -73,10 +76,10 @@
     }
 
     .footer {
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
+      text-align: center;
       font-size: 13px;
+      padding: 10px;
+      background-color: #fff; /* Footer için beyaz arka plan */
     }
 
     .footer a {
