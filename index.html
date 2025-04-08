@@ -30,14 +30,15 @@
     }
 
     .logo {
-      width: 200px; /* Logoyu büyütüyoruz */
+      width: 50%; /* Logoyu telefon ekranına göre responsive yapıyoruz */
+      max-width: 200px; /* Logo boyutunu sınırlıyoruz */
       height: auto;
       margin-bottom: -30px; /* Logo ve başlık arasındaki boşluğu ayarlıyoruz */
       display: block;
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 22px; /* Mobil uyumlu başlık boyutu */
       color: #333; /* Başlık rengi siyah olacak */
       font-weight: bold;
       margin-top: 10px; /* Başlık için üstten biraz boşluk ekliyoruz */
@@ -108,6 +109,33 @@
       }
       100% {
         left: 100%;
+      }
+    }
+
+    /* Responsive Tasarım: Telefonlar için */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px; /* Daha küçük telefon ekranları için başlık boyutu */
+      }
+
+      .button {
+        font-size: 16px; /* Butonlarda yazı boyutunu küçültüyoruz */
+        padding: 12px;
+      }
+
+      .footer a {
+        font-size: 12px; /* Footer yazısı boyutunu küçültüyoruz */
+      }
+    }
+
+    /* Daha geniş ekranlar için (tablet vb.) */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 22px; /* Tabletlerde başlık boyutu */
+      }
+
+      .button {
+        font-size: 18px; /* Tabletlerde buton yazı boyutu */
       }
     }
   </style>
